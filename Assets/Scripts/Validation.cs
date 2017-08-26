@@ -17,6 +17,7 @@ public class Validation : MonoBehaviour, ITrackableEventHandler
     void Start () {
 
         mTrackableBehaviour = GetComponent<TrackableBehaviour>();
+
         if (mTrackableBehaviour)
         {
             mTrackableBehaviour.RegisterTrackableEventHandler(this);
@@ -38,7 +39,7 @@ public class Validation : MonoBehaviour, ITrackableEventHandler
             else
             {
                 //Turning on validation label and turning off Ethan
-                //Becaues if don't do that game goes apeshit and crashes spamming inactive controller move warning 
+                //Becaues if I don't do that game goes apeshit and crashes spamming inactive controller move warning 
                 validationLabel.gameObject.SetActive(true);
                 Ethan.SetActive(false);
             }
